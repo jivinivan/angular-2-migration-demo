@@ -2,19 +2,27 @@
 
 angular
   .module('pongScoreApp', [])
-  .controller('pongScoreCtrl', pongScoreCtrl);
+  .controller('pongScoreCtrl', pongScoreCtrl)
+  .directive('pongScoreForm', pongScoreDirective);
 
-function pongScoreCtrl() {
-  this.player = {
-    wins: 0,
-    losses: 0
+function pongScoreCtrl() {}
+
+function pongScoreDirective() {
+  return {
+    controllerAs: 'formCtrl',
+    controller: [function(){
+      this.player = {
+        wins: 0,
+        losses: 0
+      };
+
+      this.addWin = function() {
+        this.player.wins++;
+      };
+
+      this.addLoss = function() {
+        this.player.losses++;
+      };
+    }]
   };
 }
-
-pongScoreCtrl.prototype.addWin = function() {
-  this.player.wins++;
-};
-
-pongScoreCtrl.prototype.addLoss = function() {
-  this.player.losses++;
-};
