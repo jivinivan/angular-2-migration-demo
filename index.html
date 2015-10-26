@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="pongScoreApp">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <h1>Ping Pong Score Keeper</h1>
+      <div class="panel panel-default pong-score" ng-controller="pongScoreCtrl as pongCtrl">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>Wins: {{pongCtrl.player.wins}}</h2>
+              <button type="button" class="btn btn-primary" ng-click="pongCtrl.addWin()">Add Win</button>
+            </div>
+            <div class="col-sm-6">
+              <h2>Losses: {{pongCtrl.player.losses}}</h2>
+              <button type="button" class="btn btn-danger" ng-click="pongCtrl.addLoss()">Add Loss</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
