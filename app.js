@@ -2,19 +2,21 @@
 
 angular
   .module('pongScoreApp', [])
-  .controller('pongScoreCtrl', pongScoreCtrl);
+  .controller('PongScoreCtrl', PongScoreCtrl);
 
-function pongScoreCtrl() {
-  this.player = {
-    wins: 0,
-    losses: 0
+class PongScoreCtrl {
+  constructor() {
+    this.player = {
+      wins: 0,
+      losses: 0
+    };
+  }
+
+  addWin() {
+    this.player.wins++;
+  };
+
+  addLoss() {
+    this.player.losses++;
   };
 }
-
-pongScoreCtrl.prototype.addWin = function() {
-  this.player.wins++;
-};
-
-pongScoreCtrl.prototype.addLoss = function() {
-  this.player.losses++;
-};
