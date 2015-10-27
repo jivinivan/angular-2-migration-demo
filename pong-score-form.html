@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Wins: {{playerService.player.wins}}</h2>
+        <button type="button" class="btn btn-primary" (click)="playerService.addWin()">Add Win</button>
+      </div>
+      <div class="col-sm-6">
+        <h2>Losses: {{playerService.player.losses}}</h2>
+        <button type="button" class="btn btn-danger" (click)="playerService.addLoss()">Add Loss</button>
+      </div>
+    </div>
+  </div>
+</div>
