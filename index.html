@@ -9,22 +9,24 @@
   </head>
 
   <body>
-    <div class="container text-center">
+    <div class="container text-center" ng-controller="pongScoreCtrl as pongCtrl">
       <h1>Ping Pong Score Keeper</h1>
-      <div class="panel panel-default pong-score" ng-controller="pongScoreCtrl as pongCtrl">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-6">
-              <h2>Wins: {{pongCtrl.player.wins}}</h2>
-              <button type="button" class="btn btn-primary" ng-click="pongCtrl.addWin()">Add Win</button>
-            </div>
-            <div class="col-sm-6">
-              <h2>Losses: {{pongCtrl.player.losses}}</h2>
-              <button type="button" class="btn btn-danger" ng-click="pongCtrl.addLoss()">Add Loss</button>
+      <pong-score-form>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>Wins: {{formCtrl.player.wins}}</h2>
+                <button type="button" class="btn btn-primary" ng-click="formCtrl.addWin()">Add Win</button>
+              </div>
+              <div class="col-sm-6">
+                <h2>Losses: {{formCtrl.player.losses}}</h2>
+                <button type="button" class="btn btn-danger" ng-click="formCtrl.addLoss()">Add Loss</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </pong-score-form>
     </div>
   </body>
 </html>
