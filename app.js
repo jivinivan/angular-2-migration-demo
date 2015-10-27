@@ -1,9 +1,5 @@
 'use strict';
 
-angular
-  .module('pongScoreApp', [])
-  .controller('PongScoreCtrl', PongScoreCtrl);
-
 class PongScoreCtrl {
   constructor() {
     this.player = {
@@ -20,3 +16,7 @@ class PongScoreCtrl {
     this.player.losses++;
   };
 }
+
+angular
+  .module('pongScoreApp', [])
+  .controller('PongScoreCtrl', PongScoreCtrl);
