@@ -16,12 +16,12 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-sm-6">
-                <h2>Wins: {{formCtrl.player.wins}}</h2>
-                <button type="button" class="btn btn-primary" ng-click="formCtrl.addWin()">Add Win</button>
+                <h2>Wins: {{formCtrl.pongScoreService.player.wins}}</h2>
+                <button type="button" class="btn btn-primary" ng-click="formCtrl.pongScoreService.addWin()">Add Win</button>
               </div>
               <div class="col-sm-6">
-                <h2>Losses: {{formCtrl.player.losses}}</h2>
-                <button type="button" class="btn btn-danger" ng-click="formCtrl.addLoss()">Add Loss</button>
+                <h2>Losses: {{formCtrl.pongScoreService.player.losses}}</h2>
+                <button type="button" class="btn btn-danger" ng-click="formCtrl.pongScoreService.addLoss()">Add Loss</button>
               </div>
             </div>
           </div>

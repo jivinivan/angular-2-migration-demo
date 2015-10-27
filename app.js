@@ -25,13 +25,7 @@ function pongScoreDirective() {
   return {
     controllerAs: 'formCtrl',
     controller: ['pongScoreService', function(pongScoreService) {
-      this.player = pongScoreService.player;
-      this.addWin = function addWin() {
-        pongScoreService.addWin();
-      }
-      this.addLoss = function addLoss() {
-        pongScoreService.addLoss();
-      }
+      this.pongScoreService = pongScoreService;
     }]
   };
 }
