@@ -32,8 +32,7 @@ var pongScoreForm = ng.
 
 var pongScoreApp = ng.
   Component({
-    selector: 'pong-score-app',
-    bindings: [playerService]
+    selector: 'pong-score-app'
   }).
   View({
     templateUrl: './pong-score-app.html',
