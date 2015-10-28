@@ -18,7 +18,6 @@ playerService.prototype.addLoss = function(){
 var pongScoreForm = ng.
   Component({
     selector: 'pong-score-form',
-    properties: ['person'],
     bindings: [playerService]
   }).
   View({
