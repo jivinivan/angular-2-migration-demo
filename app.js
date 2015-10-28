@@ -10,11 +10,11 @@ class PongScoreCtrl {
 
   addWin() {
     this.player.wins++;
-  };
+  }
 
   addLoss() {
     this.player.losses++;
-  };
+  }
 }
 
 angular
